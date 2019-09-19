@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Component } from "react";
 import { Route } from "react-router-dom";
 import SavedList from "./Movies/SavedList";
 import MovieList from "./Movies/MovieList";
@@ -19,6 +19,9 @@ const App = () => {
         path="/movies/:id"
         render={props => {
           return <Movie {...props} addToSavedList={addToSavedList} />;
+          // <Route path="/update-movie/:id" render={props => {
+          //   return <Component />
+          // }}
         }}
       />
     </>
